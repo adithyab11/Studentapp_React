@@ -5,16 +5,18 @@ import SearchStudent from './components/SearchStudent';
 import DeleteStudent from './components/DeleteStudent';
 import ViewallStudent from './ViewallStudent';
 import Navbar from './components/Navbar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <AddStudent/>
-      <SearchStudent/>
-      <DeleteStudent/>
-      <ViewallStudent/>
-      <Navbar/>
-    </div>
+<BrowserRouter>
+<Routes>
+  <Route path='/' element={<AddStudent/>}/>
+  <Route path='/Search' element={<SearchStudent/>}/>
+  <Route path='/delete' element={<DeleteStudent/>}/>
+  <Route path='/viewall' element={<ViewallStudent/>}/>
+</Routes>
+</BrowserRouter>
   );
 }
 
